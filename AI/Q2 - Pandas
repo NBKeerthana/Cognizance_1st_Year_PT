@@ -1,0 +1,48 @@
+#Code given by Cognizance team
+import pandas
+data = [
+    [170, 65, 19, 85, 5],
+    [180, 75, 20, 90, 6],
+    [160, 55, 18, 80, 4],
+    [175, 70, 21, 88, 7],
+    [155, 50, 19, 82, 5],
+    [165, 62, 22, 89, 6],
+    [178, 80, 23, 91, 7],
+    [162, 58, 20, 78, 3],
+    [172, 68, 19, 86, 5],
+    [169, 66, 20, 84, 4],
+    [171, 64, 22, 87, 6],
+    [177, 72, 21, 90, 9],
+    [174, 76, 24, 88, 8],
+    [158, 52, 18, 75, 3],
+    [164, 63, 19, 81, 4]
+]
+# column names being ‘Height’, ‘Weight’, ‘Age’, ‘Avg_Grade’ and ‘Courses’ in that order.
+
+
+#prg-1
+import pandas as pd
+myDataSet = {
+    'Height': [170,180,160,175,155,165,178,162,172,169,171,177,174,158,164],
+    'Weight': [65,75,55,70,50,62,80,58,68,66,64,72,76,52,63],
+    'Age': [19,20,18,21,19,22,23,20,19,20,22,21,24,18,19],
+    'Avg_Grade':[85,90,80,88,82,89,91,78,86,84,87,90,88,75,81],
+    'Courses': [5,6,4,7,5,6,7,3,5,4,6,9,8,3,4]
+    }
+myvar = pd.DataFrame(myDataSet)
+print(myvar)
+
+#prg-2
+import pandas as pd
+myvar.describe()
+
+#prg-3
+import pandas as pd
+myvar.value_counts()
+
+#prg-4
+filter_myDataSet = myvar[(myvar['Age']>20) ]
+print(filter_myDataSet)
+
+#prg-5
+myvar.groupby(['Avg_Grade']).mean()
