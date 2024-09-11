@@ -38,7 +38,7 @@ myvar.describe()
 
 #prg-3
 import pandas as pd
-myvar.value_counts()
+myvar['Age'].value_counts()
 
 #prg-4
 filter_myDataSet = myvar[(myvar['Age']>20) ]
